@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //number enteros y flotantes
+        let v1=10.0;
+        /*
+        Infinity --> vslor mauyor que cualquier otro numero
+        NaN  --> error numerico
+        */
+       console.log(v1/0);
+       console.log(Infinity);
+
+       console.log("hola"/10);
+       console.log(NaN+10);
+       
+       let bigInt = 9007199254740991n; 
+       console.log(typeof(bigInt)) ;
+      
+    //String
+      let c1="doble comilla";
+      let c2='Comilla simple';
+      let c3=`Puedo incrustar una expresion Javascript ${ c2.toUpperCase() }`;
+      console.log(c3);
+     
+      //booleans
+      let b1=true;
+      let v2=v1>90;
+      console.log(v2);
+
+      //null
+      let n1=null;
+      console.log(n1);
+      n1=10
+      console.log(n1);
+
+      //undefined
+      let u1;
+      console.log(u1);
+      let u2=undefined;
+
+      //objetos
+      let alumno={
+          nombre: "pepe",
+          edad: 70,
+          tipo: "profesor"};
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
