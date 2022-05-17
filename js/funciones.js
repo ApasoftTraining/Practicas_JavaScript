@@ -13,3 +13,27 @@ function pintar_mensaje(mensaje)
      console.log(mensaje);
 
 }
+
+// Ros Garcia Perez   --> R.G.P.
+
+function iniciales(a,b,c)
+{       
+    console.log(a.charAt(0)+"."+b.charAt(0)+"."+c.charAt(0)+"." );
+    console.log(`${a.charAt(0)}.${b.charAt(0)}.${c.charAt(0)}.`);
+
+}
+
+/*
+const iniciales=(a,b,c)=>{
+    console.log(a.charAt(0)+"."+b.charAt(0)+"."+c.charAt(0)+"." );
+}
+*/
+
+function f1(nombre_cliente,provincia='Madrid')
+{
+    if (nombre_cliente===undefined)
+    {
+        nombre_cliente="sin nombre";
+    }
+    console.log(nombre_cliente+" "+provincia);
+}
