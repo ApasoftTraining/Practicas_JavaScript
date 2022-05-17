@@ -38,6 +38,16 @@ function f1(nombre_cliente,provincia='Madrid')
     console.log(nombre_cliente+" "+provincia);
 }
 
+
+//Funciona declarativa
 function suma(n1=0,n2=0) {
     return n1+n2;    
 }
+
+//Con expresion
+let suma1=function (n1=0,n2=0) {
+    return n1+n2; 
+}
+
+let suma2=suma1;
+let suma3=suma;
