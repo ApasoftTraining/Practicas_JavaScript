@@ -1,0 +1,16 @@
+body {
+    background-color: cornflowerblue;
+}
+
+h1{
+   background-color: darkseagreen;
+   text-align: center;
+   color: red;
+}
+
+p {
+    background-color: brown;
+    font-size: 30px;
+    text-align: left;
+    color: white;
+}

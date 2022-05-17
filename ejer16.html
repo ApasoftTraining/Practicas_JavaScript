@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
     <title>Document</title>
 </head>
 <body>
+    <h1>Ejemplo</h1>
     <div id="principal">
-        <p>HOLA</p>
+        <p id="parrafo1">     HOLA       </p>
+        <p>ADIOS</p>
+        <p>Ejemplo</p>
     </div>
     <script>   
+        let v1=prompt('Dime el color');
+        let v2=prompt('Tamaño de la letra del parrafo');
         let div1 = document.getElementById('principal');
-        div1.style.backgroundColor = "blue";
+        div1.style.backgroundColor = v1;
+        let p1=document.getElementById('parrafo1');
+        p1.style.fontSize=v2+"px";
+     
     </script>
 </body>
 </html>
