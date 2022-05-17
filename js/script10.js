@@ -3,11 +3,12 @@
 let nombre = prompt("Dime tu nombre:");
 
 document.write("<h1>PONER NOMBRE AL REVES</h1>")
-
+ document.write("<p>")
 for (let i = nombre.length-1; i >= 0; i--) {
-    //document.write(nombre.charAt(i));
-    document.write("<p>" + nombre.charAt(i) + "</p>")
+    //document.write(nombre.charAt(i));  
+    document.write(nombre.charAt(i)+"<br/>");    
 }
+document.write("</p>")
 //en mdo tabla
 /*
 document.write("<table border=1px>");
@@ -25,7 +26,7 @@ for (let i = nombre.length; i >= 0; i--) {
 }
 document.write("</table>");
 /*
-< table >
+< table border=1px>
   <tr>
     <th>Company</th>
     <th>Contact</th>
@@ -36,5 +37,5 @@ document.write("</table>");
     <td>Maria Anders</td>
     <td>Germany</td>
   </tr>
-  </table >
+</table >
 */
