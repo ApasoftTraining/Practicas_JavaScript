@@ -20,11 +20,25 @@
         //Uso de getElementsByTagName
         let parrafos=document.getElementsByTagName('p');
         console.log(parrafos);
+        //Comprobar los parrafos del documento
         console.log("Hay "+parrafos.length+" parrafos en el documento");
         for (let parrafo of parrafos)
         {
             console.log(parrafo.innerText);
         }
+        //Cambiar el texto de un parrafo
+        let texto=prompt('Dime el contenido del parrafo')
+        let p1=document.getElementById('parrafo1');
+        p1.innerHTML=texto;
+        
+        //Cambiar el color a los h1
+        let gordos=document.getElementsByTagName('h1');
+        for (let gordo of gordos)
+        {
+            gordo.style.backgroundColor="red";
+        }
+
+
     </script>
 </body>
 </html>
