@@ -2,7 +2,7 @@ body {
     background-color: cornflowerblue;
 }
 
-h1{
+h1 {
    background-color: darkseagreen;
    text-align: center;
    color: red;
@@ -13,4 +13,9 @@ p {
     font-size: 30px;
     text-align: left;
     color: white;
+}
+
+div {
+
+    border: 1px;
 }
