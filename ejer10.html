@@ -11,11 +11,18 @@
         //   OR --> ||
         //   AND --> &&
         //   NOT --> !
+
+        let v1=100;
         let contador = 0;
+        document.write(v1);
         while (contador < 5) {
             console.log(contador);
             contador++;
+            let v1=900;
+            document.write(v1);
         }
+        document.write(v1);
+
 
         contador = 0;
         do {
@@ -25,7 +32,21 @@
 
         for (let index = 0; index < 3; index++) {
             console.log(index);
+        }
 
+        // break    continue
+
+
+    primero:    for (let index = 0; index < 2; index++) {
+            for (let index1 = 0; index1 < 5; index1++) {
+                
+                console.log('bucle finale');
+                if(index1==3){
+                    break primero;
+                }
+            } 
+            console.log('bucle inicial');
+            
         }
 
     </script>
