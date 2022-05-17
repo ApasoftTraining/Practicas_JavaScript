@@ -37,3 +37,7 @@ function f1(nombre_cliente,provincia='Madrid')
     }
     console.log(nombre_cliente+" "+provincia);
 }
+
+function suma(n1=0,n2=0) {
+    return n1+n2;    
+}
