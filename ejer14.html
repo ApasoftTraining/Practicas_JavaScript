@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Arrow Functions
+       let f1=(a,b)=>a+b;
+       //equivalente a
+       
+       function f2(a,b){
+           return a+b;
+       }
+
+       console.log(f1(10,20));
+
+       let f3=(a)=>a*a;
+       let f4=a=>a*a;
+       let f5=()=>console.log('hola');
+
+       console.log(f3(10));
+       console.log(f4(90));
+       f5();
+
+       let f6=()=>{
+           console.log(1);
+           console.log(2);
+       }
+       f6();
+
+    </script>
+</body>
+</html>

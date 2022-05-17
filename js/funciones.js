@@ -23,6 +23,10 @@ function iniciales(a,b,c)
 
 }
 
+let iniciales1=(a,b,c)=>{
+    console.log(a.charAt(0)+"."+b.charAt(0)+"."+c.charAt(0)+"." );
+}
+
 /*
 const iniciales=(a,b,c)=>{
     console.log(a.charAt(0)+"."+b.charAt(0)+"."+c.charAt(0)+"." );
@@ -51,3 +55,5 @@ let suma1=function (n1=0,n2=0) {
 
 let suma2=suma1;
 let suma3=suma;
+
+
