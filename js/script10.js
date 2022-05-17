@@ -15,14 +15,14 @@ document.write("<table border=1px>");
 document.write("<tr>");
 document.write("<th>");
 document.write("Inicial");
-document.write("</tr>");
 document.write("</th>");
+document.write("</tr>");
+
 
 for (let i = nombre.length; i >= 0; i--) {
     document.write("<tr>");
     document.write("<td>" + nombre.charAt(i) + "</td>")
     document.write("</tr>");
-
 }
 document.write("</table>");
 /*
