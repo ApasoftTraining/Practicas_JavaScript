@@ -10,7 +10,7 @@ for (let i = nombre.length-1; i >= 0; i--) {
 }
 document.write("</p>")
 //en mdo tabla
-/*
+
 document.write("<table border=1px>");
 document.write("<tr>");
 document.write("<th>");
