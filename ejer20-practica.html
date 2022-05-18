@@ -22,7 +22,32 @@
     <script>
        //Recuperar el contenido de todos los parrafos y meterlo en un array
        //Visualizar el array al reves
-       
+       //let elementos=document.querySelectorAll("p");
+              let elementos=document.getElementsByTagName("p");
+       //Crear array
+       //let array1=new Array(elementos.length);
+       let array1=[];
+
+        //Rellenamos el array
+        for (let elemento of elementos)
+        {
+            array1.push(elemento.innerHTML);            
+        }
+
+        //Con un bucle normal
+        /*
+        for (let x=array1.length-1;x>=0;x--){
+          console.log(array1[x]);
+        }
+        */
+
+
+        //Otra opcion. conreverse
+        
+        array1.reverse();
+        for (let elemento of array1){
+            console.log(elemento);
+        }
     </script>
 
 </body>
