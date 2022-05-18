@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> METODOS CON ARRAYS</h1>
+
+    <script>
+        let array1=['ahola',2,true,'adios'];
+        console.log(array1);
+
+        delete array1[1];
+        console.log(array1);
+
+        array1=['ahola',2,true,'adios'];
+        console.log(array1);
+
+        array1.splice(1,1);
+        console.log(array1);
+
+        array1.splice(0,1,"otros",10,false);
+        console.log(array1);
+
+        array2=[10,20,30,40,50];
+        console.log(array2);
+ 
+        //slice devuelve un array nuevo
+        array3=array2.slice(0,3);
+        console.log(array2);
+        console.log(array3);
+
+        //Concatenar arrays
+        arrayt=array1.concat(array2);
+        console.log(arrayt);
+
+        arrayt=array1.concat(array2,[90,100]);
+        console.log(arrayt);
+        //Recorrer el array con una funcion
+
+        array1.forEach ((x)=>console.log(x+" "+typeof(x)));
+        array1.forEach ((r)=>console.log(r+" "+typeof(r)));
+        
+        array1.forEach((elemento,posicion,array)=>
+        {
+            console.log(elemento+" "+posicion+" "+array[posicion]);
+        }
+        )
+
+              
+        array2.forEach((elemento,posicion,array)=>
+        {
+            array[posicion]=array2[posicion]*10;
+            console.log(elemento+" "+posicion+" "+array[posicion]);
+        }
+        )
+        console.log(array2);
+
+
+    </script>
+    
+</body>
+</html>
