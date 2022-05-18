@@ -19,3 +19,21 @@ div {
 
     border: 1px;
 }
+
+#parrafo1 {
+    text-align: center;
+    color: darksalmon;
+    background-color: black;
+    font-size: 40px;
+}
+
+.parrafo_bonito {
+   text-align: right;
+   color: blue;
+   background-color: blueviolet;
+   font-size: 50px;
+}
+
+h1.izquierda {
+    text-align: left;
+}
