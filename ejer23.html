@@ -31,6 +31,71 @@
       conjunto.add('uno');
       console.log(conjunto);
 
+      //Destructuracion
+      let persona=["alberto","perez","Rodriguez"];
+      let [nombre,ape1,ape2]=persona;
+      console.log(nombre);
+      console.log(ape1);
+      console.log(ape1);
+      
+      let [n1,,ap2]=persona;
+      console.log(n1+ap2);
+
+      [n1,ap2]="Pedro Perez".split(' ');
+      console.log(`${n1}  --> ${ap2}`);
+      
+      let [a,b,,,,,c]="Esto es una prueba";
+      console.log(`${a}  --> ${b}  --> ${c}`);
+
+      //Desestructuacion Objetos
+      let usuario={};
+      [usuario.nombre,usuario.apellido]="Alberto Perez".split(' ');
+      console.log(`${usuario.nombre}  --> ${usuario.apellido}`);
+
+
+       let curso={
+           nombre: "informatica",
+           aula: "Planta Baja",
+           profesor: "ALberto",
+           alumnos: 100,
+           descripcion: "Curso informatica"   
+       }
+
+       let {nombre:n, aula:a1, profesor:p, ...otras  }=curso;
+       console.log(`${n}  --> ${a1} --> ${p} -->${otras.alumnos}  ${otras.descripcion}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
