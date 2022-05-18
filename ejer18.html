@@ -16,11 +16,19 @@
         <p class="parrafo_bonito">ADIOS</p>
         <p class="parrafo_bonito">Ejemplo</p>
         <h1 class="izquierda">Otro h1</h1>
+        <p class="clase1">UNO</p>
+        <p class="clase1">DOS</p>
     </div>
     <script>
-
+        //Buscar por clase on CSS
         let parrafos=document.getElementsByClassName("parrafo_bonito");
         for (let parrafo of parrafos)
+        {
+            console.log(parrafo.innerText);
+        }
+        //Busqueda con clase sin CSS
+        let pars=document.getElementsByClassName("clase1");
+        for (let parrafo of pars)
         {
             console.log(parrafo.innerText);
         }
