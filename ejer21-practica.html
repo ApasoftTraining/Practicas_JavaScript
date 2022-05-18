@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./estilos/principal.css">
+    <link rel="stylesheet" href="./estilos/principal.css">
     <title>Document</title>
 </head>
 
@@ -23,7 +23,27 @@
         //Visualize todos los contenidos del documento en minsucula
         //Meter los elementos del DOM en un array
         //Recorrerlo con un forEach para pintar el valor en minscuulas
-        
+        let elementosDOM = document.getElementsByTagName('*');
+        let array1 = new Array();
+        for (let x of elementosDOM) { array1.push(x) };
+
+        array1.forEach((elemento) => {
+            console.log(elemento.innerHTML.toLowerCase())
+        }
+        );
+        console.log('======================================');
+        elementosDOM = document.querySelectorAll('h1,p');
+        array1 = new Array();
+        for (let x of elementosDOM) { array1.push(x) };
+
+        array1.forEach((elemento) => {
+            console.log(elemento.innerHTML.toLowerCase())
+        }
+        );
+
+        let resultado=array1.map((elemento) => elemento.innerHTML.toLowerCase() );
+        console.log(resultado);
+
     </script>
 
 </body>
