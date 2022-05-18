@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Añadir un parrafo, una caja de text y un boton de forma dinámica
+        //Parrafo
+        let parrafo=document.createElement('p');
+        parrafo.innerHTML="Parrafo de ejemplo";
+       
+        //Caja de texto
+        let caja=document.createElement('input');
+        caja.type='text';
+        caja.style.backgroundColor='blue';
+        caja.style.color='white';
+        caja.value='pon algo';
+
+        //boton
+        let boton=document.createElement('button');
+        boton.innerHTML="Aceptar";
+
+       
+        document.body.append(parrafo);
+        document.body.append(caja);
+        let linea=document.createElement('br');
+        document.body.append(linea);
+        document.body.append(boton);
+
+        //Crear múltiples botones
+        
+        let botones=new Array()
+        for (let x=1;x<=10;x++)
+        {
+            botones[x]=document.createElement("button");
+            botones[x].innerHTML="boton"+x;
+            document.body.append(botones[x]);
+        }
+
+
+    </script>
+</body>
+</html>
