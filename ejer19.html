@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./estilos/principal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejemplo</h1>
+    <div id="principal">
+        <p id="parrafo1"> HOLA </p>
+        <p class="parrafo_bonito">ADIOS</p>
+        <p class="parrafo_bonito">Ejemplo</p>
+        <h1 class="izquierda">Otro h1</h1>
+        <p class="clase1">UNO</p>
+        <p class="clase1">DOS</p>
+    </div>
+    <script>
+        //Buscar por select CSS
+        let elementos=document.querySelectorAll("p");
+        for (let elemento of elementos)
+        {
+            console.log(elemento.innerText);
+        }
+
+        let elementos1=document.querySelectorAll(".parrafo_bonito");
+        for (let elemento of elementos1)
+        {
+            console.log(elemento.innerText);
+        }
+        let elemento=document.querySelector("p");
+        console.log(elemento.innerHTML);
+    </script>
+
+</body>
+
+</html>
