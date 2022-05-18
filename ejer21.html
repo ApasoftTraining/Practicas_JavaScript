@@ -39,8 +39,8 @@
 
         arrayt=array1.concat(array2,[90,100]);
         console.log(arrayt);
+        
         //Recorrer el array con una funcion
-
         array1.forEach ((x)=>console.log(x+" "+typeof(x)));
         array1.forEach ((r)=>console.log(r+" "+typeof(r)));
         
@@ -49,7 +49,6 @@
             console.log(elemento+" "+posicion+" "+array[posicion]);
         }
         )
-
               
         array2.forEach((elemento,posicion,array)=>
         {
@@ -58,6 +57,39 @@
         }
         )
         console.log(array2);
+
+        //buscar elemento en el índice -1 sdi no esta
+        console.log(array2.indexOf(20));
+        console.log(array2.indexOf(200));
+        console.log(array2.lastIndexOf(200));
+     
+        //buscar usndo una funcion. Devuelve el primer elemnto que cumple
+        console.log(array1);
+        let resultado= array1.find((elemento,posicion,array)=>{
+            if (typeof(elemento)=="string") 
+            {return true} 
+            else 
+            {return false};
+        })
+        console.log(resultado);
+
+      //buscar usndo una funcion. Devuelve tpodos los elementos que cumple
+
+        resultado= array1.filter((elemento,posicion,array)=>{
+            if (typeof(elemento)=="string") 
+            {return true} 
+            else 
+            {return false};
+        })
+        console.log(resultado);
+
+
+
+
+
+
+
+        
 
 
     </script>
