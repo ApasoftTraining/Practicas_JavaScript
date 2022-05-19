@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mi primer ejemplo de JavaScript y Bootstrap</h1>
+        <div class="row">
+            <div class="col-sm-6" style="background-color: rgb(123, 255, 47);">Primer columna</div>
+            <div class="col-sm-6" id="columna2">Poner nombre y apellidos</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2" style="background-color: rgb(123, 255, 47);">Primer columna</div>
+            <div class="col-md-10" id="columna2">Poner nombre y apellidos</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color: cyan;">Mis Datos personales</div>
+            <div class="col-sm-8">
+                <table class="table  table-hover table-striped">
+                    <tr class="table-warning">
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Apellidos
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Alberto
+                        </td>
+                        <td>
+                            Rodriguez
+                        </td>
+                    <tr>
+                        <td>
+                            Rosa
+                        </td>
+                        <td>
+                            Garcia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pedro
+                        </td>
+                        <td>
+                            Romero
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="row">
+                <!--  
+               Poner una caja de texto y una label
+               Cadad que ponemos una letra en la caja de texto la pintamos en la label
+          -->
+           
+                <input id="caja" type="text" onkeyup="actualizar_label()"  onchange="alert('mensaje')"  class="form-control">     
+                <label id="etiqueta" class="form-label">NADA</label>
+                <label id="eti" onclick="alert('primero')">PRUEBA DE ETIQUETA</label>
+                <label id="eti1">VER DTOS DEL EVENTO</label>
+            
+            </div>
+
+        </div>
+        <script>
+            //Eventos
+            //Poner eventos a nivel del element  DOM 
+            eti.onclick=function(){
+                alert('segundo');
+            }
+            //Forma alternativa
+            eti.onclick=()=> alert('tercera');
+
+            eti.addEventListener("click",alarma);
+            eti.addEventListener("click",alarma1);
+           
+            function alarma(){
+                alert('cuarta');
+            }
+            function alarma1(){
+                alert('quintsa');
+            }
+            eti1.onclick=(evento)=>{
+                console.log(evento);
+            }
+
+            eti1.onclick=function(evento){
+                console.log(evento);
+                console.log(evento.target.innerHTML);
+                console.log(evento.clientX+" "+evento.clientY);
+                console.log("El evento es de tipo:"+evento.type);
+            }
+
+            
+
+
+
+
+            function actualizar_label() {
+                //var eti = document.getElementById("etiqueta")
+                //eti.innerHTML = document.getElementById("caja").value;
+                document.getElementById("etiqueta").innerHTML = document.getElementById("caja").value;
+            }
+
+
+
+
+
+
+  /*
+ <label id="etiqueta1" onclick="alert('primera')" class="form-label">NADA</label>
+            etiqueta1.onclick = () => alert('segunda');
+            etiqueta1.addEventListener("click", handler1); // Gracias!
+            etiqueta1.addEventListener("click", handler2); // Gracias de nuevo!
+            function handler1() {
+                alert('Tercera');
+            };
+
+            function handler2() {
+                alert('Cuarta');
+            }*/
+        </script>
+</body>

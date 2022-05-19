@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="Añadir párrafo" onclick="poner_parrafo();">
+    <input type="button" value="Borrar párrafo" onclick="quitar_parrafo();">
+    <script>
+        var num_parrafo = 1;
+        function poner_parrafo() {
+            var parrafo = document.createElement('p');
+            parrafo.innerHTML = "es el parrafo " + num_parrafo++;
+            document.body.appendChild(parrafo);
+        }
+
+        function quitar_parrafo() {
+            if (num_parrafo == 1) { alert('no hay mas parrafos'); }
+            else
+            {
+                var parrafos = document.getElementsByTagName('p');
+                var ultimo = parrafos[parrafos.length - 1];
+                //document.body.removeChild(ultimo);
+                 ultimo.parentNode.removeChild(ultimo);
+                num_parrafo--;
+            }
+        }
+    </script>
+</body>
+
+</html>
