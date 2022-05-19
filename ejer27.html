@@ -30,8 +30,17 @@
 
         div1.addEventListener("mouseout", rojo);
 
+        div1.addEventListener("dblclick", (evento)=> amarillo(evento,"AMARILLO"));
+
+
         function verde(e,c) {
             div1.style.backgroundColor = 'green';
+            div1.innerHTML=c;
+            console.log(e);
+        }
+
+        function amarillo(e,c) {
+            div1.style.backgroundColor = 'yellow';
             div1.innerHTML=c;
             console.log(e);
         }
