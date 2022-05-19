@@ -9,6 +9,9 @@
 <body>
 
     <h1> ejemplo de objetos</h1>
+    <label id="eti">DATOS DEL ALUMNO</label>
+    <label id="eti1"></label>
+    <button id="b1" onclick="pintar_alumno()">ACEPTAR</button>
     
     <script>
      //Objetos 
@@ -19,13 +22,16 @@
          nombre: "Juan",
          edad: 20,
          curso: "Informatica",
-         "nombre profesor": "Rodolfo"
-
+         "nombre profesor": "Rodolfo",
+  
      }
 
      //Crear un boton que a l pulsarlo visualice en una label los datos del alumno
-
-
+function pintar_alumno()
+{
+    document.getElementById("eti").innerHTML=`${alumno.nombre}  ${alumno.edad} ${alumno.curso} ${alumno['nombre profesor']}`
+}
+  
 
     </script>
 </body>
