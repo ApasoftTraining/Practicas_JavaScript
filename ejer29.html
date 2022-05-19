@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> ejemplo de objetos</h1>
+    <label id="eti">DATOS DEL ALUMNO</label>
+   
+    <button id="b1" onclick="pintar_alumno()">ACEPTAR</button>
+    <br/>
+     <label id="eti1"></label>
+    <script>
+     //Objetos 
+     let obj1= new Object();
+     let obj2={};
+
+     let alumno={
+         //Propiedades
+         nombre: "Juan",
+         edad: 20,
+         curso: "Informatica",
+         "nombre profesor": "Rodolfo",
+
+         //Funciones
+         ver_curso: function(){
+            return this.curso;
+         },
+         ver_edad: function(){
+            return this.edad;
+         },
+
+         ver_nombre(){
+            return this.nombre;
+         }
+  
+     }
+
+     //Crear un boton que a l pulsarlo visualice en una label los datos del alumno
+function pintar_alumno()
+{
+    document.getElementById("eti").innerHTML=`${alumno.nombre}  ${alumno.edad} ${alumno.curso} ${alumno['nombre profesor']}`;
+    document.getElementById("eti1").innerHTML= alumno.ver_edad();
+}
+  
+
+    </script>
+</body>
+</html>
