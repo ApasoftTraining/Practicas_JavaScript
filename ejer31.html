@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //blueprints   --> Clase
+      function  Persona (dni,nombre,edad,apellidos)
+      {
+          this.dni=dni,
+          this.nombre=nombre,
+          this.apellidos=apellidos,  
+          this.edad=edad,
+          this.ver_datos=function(){
+              return this.nombre+"--"+this.apellidos;
+
+          }
+      }
+
+      const p1=new Persona(1,'sdfsf','dsafs','fdsafdsaf')
+      const p2=new Persona(2,'sdfgvdgvsddfsf','dfdsfdssafs','fdafdsa')
+      const p3=new Persona(3,'ssfsdfsfdfsf','dsfsdffsaafs','jjjjjjj')
+
+    </script>
+</body>
+</html>
