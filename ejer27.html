@@ -9,25 +9,37 @@
 </head>
 
 <body>
-    <div id="contenidos" style="width:150px; height:60px; background: red" ;>Ejemplo de contendio</div>
+    <div id="contenidos" style="width:150px; height:60px; background: red" ;>ROJO</div>
 
     <script>
 
         //addEventListener
         var div1 = document.getElementById("contenidos");
 
-        div1.addEventListener("mouseover", verde);
+        //Primer version
+        //div1.addEventListener("mouseover", verde);
+       
+        /* Segunda version
+        div1.addEventListener("mouseover", ()=> {div1.style.backgroundColor = 'green';
+                                                div1.innerHTML="VERDE"    ;    
+        });
+        */
+
+        //tercera version
+        div1.addEventListener("mouseover", (evento)=> verde(evento,"VERDE"));
 
         div1.addEventListener("mouseout", rojo);
 
-        function verde() {
+        function verde(e,c) {
             div1.style.backgroundColor = 'green';
+            div1.innerHTML=c;
+            console.log(e);
         }
 
 
         function rojo(e, x) {
             div1.style.backgroundColor = 'red';
-
+            div1.innerHTML="ROJO"
         }
 
 
