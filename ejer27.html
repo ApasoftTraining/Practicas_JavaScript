@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="contenidos" style="width:150px; height:60px; background: red" ;>Ejemplo de contendio</div>
 
     <script>
 
         //addEventListener
+        var div1 = document.getElementById("contenidos");
+
+        div1.addEventListener("mouseover", verde);
+
+        div1.addEventListener("mouseout", rojo);
+
+        function verde() {
+            div1.style.backgroundColor = 'green';
+        }
+
+
+        function rojo(e, x) {
+            div1.style.backgroundColor = 'red';
+
+        }
+
+
+
     </script>
 </body>
+
 </html>
