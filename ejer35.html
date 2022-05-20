@@ -9,9 +9,9 @@
 <body>
     <form action="#" method="post" name="f1">
         <select id="select" onchange="mostrar()" name="lista">
-            <option value="apple">Apple</option>
-            <option value="pear">Pear</option>
-            <option value="banana">Banana</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Renault">Renault</option>
+            <option value="Citroen">Citroen</option>
           </select>
     </form>
     <div id="pintar"></div>
@@ -22,7 +22,10 @@
         select.value = 'banana';
         // Recuerda que las opciones comienzan en cero, así que index 2 significa la tercera opción.
         function mostrar(){
+            //Selecciono el formulario
             let f1=document.forms.f1;
+
+            //Localizo el elemento dentro del formulario
             let select=f1.elements.lista;
             document.getElementById("pintar").innerHTML=select.value;
         }
