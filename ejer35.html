@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" name="f1">
+        <select id="select" onchange="mostrar()" name="lista">
+            <option value="apple">Apple</option>
+            <option value="pear">Pear</option>
+            <option value="banana">Banana</option>
+          </select>
+    </form>
+    <div id="pintar"></div>
+    <script>
+        // las tres líneas hacen lo mismo
+        select.options[2].selected = true;
+        select.selectedIndex = 2;
+        select.value = 'banana';
+        // Recuerda que las opciones comienzan en cero, así que index 2 significa la tercera opción.
+        function mostrar(){
+            let f1=document.forms.f1;
+            let select=f1.elements.lista;
+            document.getElementById("pintar").innerHTML=select.value;
+        }
+      </script
+</body>
+</html>
