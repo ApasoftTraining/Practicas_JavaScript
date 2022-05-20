@@ -34,7 +34,7 @@
 
     </table>
     <script>
-        //blueprints   --> Clase
+        //blueprint   --> Clase Persona
         function Persona(dni, nombre, edad, apellidos) {
             this.dni = dni,
                 this.nombre = nombre,
@@ -48,27 +48,34 @@
 
         const p1 = new Persona(1, 'sdfsf', 'dsafs', 'fdsafdsaf')
         const p2 = new Persona(2, 'sdfgvdgvsddfsf', 'dfdsfdssafs', 'fdafdsa')
-        const p3 = new Persona(3, 'ssfsdfsfdfsf', 'dsfsdffsaafs', 'jjjjjjj')
+        const p3 = new Persona(3, 'ssfsdfsfdfsf', 'dsfsdffsaafs', 'jjjjjjj');
+        const p4 = new Persona(4, 'ssfsdafdsafdsafdsafdsfsdfsfdfsf', 'dsfsdffsaafs', 'jjjjjjj')
+
 
         //Crear un array de personas
         //Visualizamos en una tsabla de HTML 
-        personas=[p1,p2,p3];
+        //Crear un array con esas 3 personas
+        personas=[p1,p2,p3,p4];
+        //detectar la tabla
         let tabla = document.getElementById("tabla");
+        //Bucle por cada persona
         for (let persona of personas) {
+            //Creamos la fila
             let fila = document.createElement('tr');
+            //Añadir la fila a la tabla
             tabla.appendChild(fila);
+            //Creo un array para albergar las columnas
             let columnas=new Array(4); 
+            //Creo un bucle para crear las <td> y añadiras al array columnas
             for (let x=0;x<=3;x++){                           
              columnas[x]=document.createElement('td');
              fila.appendChild(columnas[x]);             
             }
-            
+            //Añadir datos a cada columna
             columnas[0].innerHTML=persona.dni;
             columnas[1].innerHTML=persona.nombre;
             columnas[2].innerHTML=persona.apellidos;
-            columnas[3].innerHTML=persona.edad;
-
-            
+            columnas[3].innerHTML=persona.edad;            
         }
     </script>
 </body>
