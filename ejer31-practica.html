@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <table class="table  table-hover table-striped">
+    <table class="table  table-hover table-striped" id="tabla">
         <tr class="table-warning">
+            <th>
+                DNI
+            </th>
             <th>
                 Nombre
             </th>
             <th>
                 Apellidos
             </th>
+            <th>
+                Edad
+            </th>
         </tr>
-        <tr>
-            <td>
-                Alberto
-            </td>
-            <td>
-                Rodriguez
-            </td>
-        <tr>
-            <td>
-                Rosa
-            </td>
-            <td>
-                Garcia
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Pedro
-            </td>
-            <td>
-                Romero
-            </td>
-        </tr>
+
 
     </table>
     <script>
-    //blueprints   --> Clase
-      function  Persona (dni,nombre,edad,apellidos)
-      {
-          this.dni=dni,
-          this.nombre=nombre,
-          this.apellidos=apellidos,  
-          this.edad=edad,
-          this.ver_datos=function(){
-              return this.nombre+"--"+this.apellidos;
+        //blueprints   --> Clase
+        function Persona(dni, nombre, edad, apellidos) {
+            this.dni = dni,
+                this.nombre = nombre,
+                this.apellidos = apellidos,
+                this.edad = edad,
+                this.ver_datos = function () {
+                    return this.nombre + "--" + this.apellidos;
 
-          }
-      }
+                }
+        }
 
-      const p1=new Persona(1,'sdfsf','dsafs','fdsafdsaf')
-      const p2=new Persona(2,'sdfgvdgvsddfsf','dfdsfdssafs','fdafdsa')
-      const p3=new Persona(3,'ssfsdfsfdfsf','dsfsdffsaafs','jjjjjjj')
+        const p1 = new Persona(1, 'sdfsf', 'dsafs', 'fdsafdsaf')
+        const p2 = new Persona(2, 'sdfgvdgvsddfsf', 'dfdsfdssafs', 'fdafdsa')
+        const p3 = new Persona(3, 'ssfsdfsfdfsf', 'dsfsdffsaafs', 'jjjjjjj')
 
-      //Crear un array de personas
-      //Visualizamos en una tsabla de HTML 
+        //Crear un array de personas
+        //Visualizamos en una tsabla de HTML 
+        personas=[p1,p2,p3];
+        let tabla = document.getElementById("tabla");
+        for (let persona of personas) {
+            let fila = document.createElement('tr');
+            tabla.appendChild(fila);
+            let columnas=new Array(4); 
+            for (let x=0;x<=3;x++){                           
+             columnas[x]=document.createElement('td');
+             fila.appendChild(columnas[x]);             
+            }
+            
+            columnas[0].innerHTML=persona.dni;
+            columnas[1].innerHTML=persona.nombre;
+            columnas[2].innerHTML=persona.apellidos;
+            columnas[3].innerHTML=persona.edad;
 
+            
+        }
     </script>
 </body>
+
 </html>
