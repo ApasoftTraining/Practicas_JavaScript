@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <title>GEOLOCALIZACION</title>
 </head>
+
 <body>
     <H1>Ejemplo de Geolocalización</H1>
     <p> Pulsa para averiguar tu localización</p>
     <button onclick="getLocation()">PULSA</button>;
-    <p id="datos" >DATOS A MOSTRAR</p>
-<script>
-     function getLocation()
-     {
-          navigator.geolocation.getCurrentPosition(mostrarPosicion);
+    <p id="datos">DATOS A MOSTRAR</p>
+    <div id="mapa">MAPA</div>
+    <script>
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(mostrarPosicion);
 
-     }
+        }
 
-     function mostrarPosicion(position)
-     {
-      document.getElementById("datos").innerHTML="Latitud "+position.coords.latitude;
-     }
-</script>
+        function mostrarPosicion(position) {
+            document.getElementById("datos").innerHTML = "Latitud " + position.coords.latitude + " Longitud:" + position.coords.longitude + "Altitud:" + position.coords.altitude;
+            //Determinamos la posición
+            posicion = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+
+            //Seleccionamos el ID del contenedor donde vamos a visualizar el mapa
+            m = document.getElementById('mapa')
+
+            //Indicamos el tamaño del mapa
+            m.style.height = '250px';
+            m.style.width = '500px';
+
+            //Indicamos opciones específicas para la API de mapas a usar
+            var opciones = {
+                center: posicion, zoom: 16, mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false, navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+            };
+
+            //Creamos e mapa con las opciones indicadas y el lugar donde queremos viualizarlo
+            var m = new google.maps.Map(document.getElementById("mapa"), opciones);
+
+            //Le indicamos el tipo de marcador que quiero que aparezca en el mapa
+            var marcador = new google.maps.Marker({ position: posicion, map: m, title: "Ando por aquí" });
+
+
+        }
+    </script>
 
 </body>
+
 </html>
