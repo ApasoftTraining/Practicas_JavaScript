@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+
+</head>
+
+<body>
+    <form action="#" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input name="nombre" id="nombre" type="text" />
+        </p>
+        <p>
+            <label for="APELLIDOS">Apellido</label>
+            <input name="apellidos" id="apellidos" />
+        </p>
+        <input type="button" value="GUARDAR" onclick="guardar()"></input>
+
+        <input type="button" value="VER DATOS" onclick="verNombre()"></input>
+        
+        <p id="ver_nombre"></p>
+
+        <script type="text/javascript">
+            window.addEventListener('storage', displayStorageEvent, false);
+            
+            function guardar() {
+                window.localStorage.setItem('apellidos', apellidos.value);
+                window.localStorage.setItem('nombre', nombre.value);
+            }
+            // visualizar el contenido de un evento de Storage
+           function displayStorageEvent(e) {
+              var x = "Clave:" + e.key + ", Nuevo:" + e.newValue + ", antiguo" + e.oldValue + ", url:" + e.url + ", Almacenamiento:" + e.storageArea;
+             alert(x);
+           }
+
+
+            function verNombre() {
+                document.getElementById("ver_nombre").innerHTML = window.localStorage.getItem("nombre")+" "+window.localStorage.getItem("apellidos");
+            }
+        </script>
+
+    </form>
+
+</body>
+
+</html>
